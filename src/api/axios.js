@@ -17,7 +17,7 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (res) => res,
   (err) => {
-    // Expired/invalid token on a protected call: force logout
+    
     if (err.response?.status === 401 && localStorage.getItem('user')) {
       localStorage.removeItem('user');
       window.location.href = '/login';
