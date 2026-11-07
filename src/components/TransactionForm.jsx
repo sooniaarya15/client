@@ -12,9 +12,8 @@ export default function TransactionForm({ onAdd }) {
     date: todayISO(),
   });
   const [saving, setSaving] = useState(false);
-
   const categories = form.type === 'income' ? INCOME_CATEGORIES : EXPENSE_CATEGORIES;
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === 'type') {
